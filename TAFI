@@ -1,0 +1,400 @@
+-- ========================================================
+-- PRIVATE DEVELOPER VERSION - SECTION 1
+-- ========================================================
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local FrameCorner = Instance.new("UICorner") 
+local TitleLabel = Instance.new("TextLabel")
+local TitleCorner = Instance.new("UICorner")
+local ToggleButton = Instance.new("TextButton")
+local ButtonCorner1 = Instance.new("UICorner")
+local NoclipButton = Instance.new("TextButton")
+local ButtonCorner2 = Instance.new("UICorner")
+local SpeedLabel = Instance.new("TextLabel")
+local SpeedSlider = Instance.new("TextButton")
+local SliderCorner = Instance.new("UICorner")
+local SliderBar = Instance.new("Frame")
+local BarCorner = Instance.new("UICorner")
+local AdminLabel = Instance.new("TextLabel")
+local RadarCorner = Instance.new("UICorner")
+
+-- KEY GATEWAY LAYOUT TERMINALS
+local KeyFrame = Instance.new("Frame")
+local KeyCorner = Instance.new("UICorner")
+local KeyTitle = Instance.new("TextLabel")
+local KeyInput = Instance.new("TextBox") 
+local KeyInputCorner = Instance.new("UICorner")
+local GetKeyBtn = Instance.new("TextButton")
+local GetKeyCorner = Instance.new("UICorner")
+local SubmitBtn = Instance.new("TextButton")
+local SubmitCorner = Instance.new("UICorner")
+
+ScreenGui.Name = "SystemMatrixData"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+-- HARDWIRED AD MONETIZATION URL
+local YOUR_AD_LINK = "https://work.ink/2IoF/get-key"
+
+-- MAIN CHEAT CONTAINER
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(5, 10, 5) 
+MainFrame.Position = UDim2.new(0.05, 0, 0.3, 0)
+MainFrame.Size = UDim2.new(0, 310, 0, 310) 
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.Visible = false 
+
+FrameCorner.CornerRadius = UDim.new(0, 8)
+FrameCorner.Parent = MainFrame
+-- ========================================================
+-- PRIVATE DEVELOPER VERSION - SECTION 2
+-- ========================================================
+TitleLabel.Parent = MainFrame
+TitleLabel.Size = UDim2.new(1, 0, 0, 42)
+TitleLabel.BackgroundColor3 = Color3.fromRGB(10, 20, 10)
+TitleLabel.BorderSizePixel = 0
+TitleLabel.Text = "  TRACK & FIELD INFINITE HUB (more features coming soon)" 
+TitleLabel.TextColor3 = Color3.fromRGB(0, 255, 50) 
+TitleLabel.TextSize = 11 
+TitleLabel.TextXAlignment = Enum.TextXAlignment.Left
+TitleLabel.Font = Enum.Font.SourceSansBold
+
+TitleCorner.CornerRadius = UDim.new(0, 8)
+TitleCorner.Parent = TitleLabel
+
+ToggleButton.Parent = MainFrame
+ToggleButton.Position = UDim2.new(0.05, 0, 0.17, 0)
+ToggleButton.Size = UDim2.new(0.9, 0, 0, 36)
+ToggleButton.BackgroundColor3 = Color3.fromRGB(15, 20, 15) 
+ToggleButton.BorderSizePixel = 0
+ToggleButton.Text = "SPEED CHANGER: NOT ACTIVE"
+ToggleButton.TextColor3 = Color3.fromRGB(150, 150, 150)
+ToggleButton.TextSize = 14
+ToggleButton.Font = Enum.Font.SourceSansBold
+
+ButtonCorner1.CornerRadius = UDim.new(0, 6)
+ButtonCorner1.Parent = ToggleButton
+
+NoclipButton.Parent = MainFrame
+NoclipButton.Position = UDim2.new(0.05, 0, 0.31, 0)
+NoclipButton.Size = UDim2.new(0.9, 0, 0, 36)
+NoclipButton.BackgroundColor3 = Color3.fromRGB(15, 20, 15)
+NoclipButton.BorderSizePixel = 0
+NoclipButton.Text = "HURDLE BYPASSER: INACTIVE"
+NoclipButton.TextColor3 = Color3.fromRGB(150, 150, 150)
+NoclipButton.TextSize = 14
+NoclipButton.Font = Enum.Font.SourceSansBold
+
+ButtonCorner2.CornerRadius = UDim.new(0, 6)
+ButtonCorner2.Parent = NoclipButton
+
+SpeedLabel.Parent = MainFrame
+SpeedLabel.Position = UDim2.new(0.05, 0, 0.47, 0)
+SpeedLabel.Size = UDim2.new(0.9, 0, 0, 20)
+SpeedLabel.Text = "  Speed Changer: 60ms (Safe)"
+SpeedLabel.TextColor3 = Color3.fromRGB(0, 200, 50)
+SpeedLabel.TextSize = 14
+SpeedLabel.Font = Enum.Font.SourceSansBold
+SpeedLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+SpeedSlider.Parent = MainFrame
+SpeedSlider.Position = UDim2.new(0.05, 0, 0.55, 0)
+SpeedSlider.Size = UDim2.new(0.9, 0, 0, 16)
+SpeedSlider.BackgroundColor3 = Color3.fromRGB(10, 15, 10)
+SpeedSlider.BorderSizePixel = 0
+SpeedSlider.Text = "" 
+
+SliderCorner.CornerRadius = UDim.new(0, 4)
+SliderCorner.Parent = SpeedSlider
+
+SliderBar.Parent = SpeedSlider
+SliderBar.Size = UDim2.new(0.5, 0, 1, 0)
+SliderBar.BackgroundColor3 = Color3.fromRGB(0, 255, 50) 
+SliderBar.BorderSizePixel = 0
+
+BarCorner.CornerRadius = UDim.new(0, 4)
+BarCorner.Parent = SliderBar
+
+AdminLabel.Parent = MainFrame
+AdminLabel.Position = UDim2.new(0.05, 0, 0.74, 0)
+AdminLabel.Size = UDim2.new(0.9, 0, 0, 60)
+AdminLabel.BackgroundColor3 = Color3.fromRGB(5, 8, 5)
+AdminLabel.BorderSizePixel = 0
+AdminLabel.Text = "  Admin Detection:\n  Admin Not Detected"
+AdminLabel.TextColor3 = Color3.fromRGB(0, 255, 50) 
+AdminLabel.TextSize = 14
+AdminLabel.Font = Enum.Font.SourceSansBold
+AdminLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+RadarCorner.CornerRadius = UDim.new(0, 6)
+RadarCorner.Parent = AdminLabel
+
+-- LOCK SCREEN CONFIG
+KeyFrame.Name = "KeyFrame"
+KeyFrame.Parent = ScreenGui
+KeyFrame.BackgroundColor3 = Color3.fromRGB(10, 12, 10)
+KeyFrame.Position = UDim2.new(0.35, 0, 0.4, 0)
+KeyFrame.Size = UDim2.new(0, 320, 0, 180)
+KeyFrame.Active = true
+KeyFrame.Draggable = true
+
+KeyCorner.CornerRadius = UDim.new(0, 8)
+KeyCorner.Parent = KeyFrame
+
+KeyTitle.Parent = KeyFrame
+KeyTitle.Size = UDim2.new(1, 0, 0, 35)
+KeyTitle.BackgroundColor3 = Color3.fromRGB(15, 25, 15)
+KeyTitle.Text = "  🔒 SYSTEM SECURITY: ENTER KEY"
+KeyTitle.TextColor3 = Color3.fromRGB(0, 255, 50)
+KeyTitle.TextSize = 13
+KeyTitle.TextXAlignment = Enum.TextXAlignment.Left
+KeyTitle.Font = Enum.Font.SourceSansBold
+
+KeyInput.Parent = KeyFrame
+KeyInput.Position = UDim2.new(0.05, 0, 0.3, 0)
+KeyInput.Size = UDim2.new(0.9, 0, 0, 35)
+KeyInput.BackgroundColor3 = Color3.fromRGB(5, 5, 5)
+KeyInput.PlaceholderText = "Paste your 6-hour ad-link key here..."
+KeyInput.TextColor3 = Color3.fromRGB(0, 255, 50)
+KeyInput.TextSize = 14
+KeyInput.Font = Enum.Font.SourceSansBold
+
+KeyInputCorner.CornerRadius = UDim.new(0, 6)
+KeyInputCorner.Parent = KeyInput
+
+GetKeyBtn.Parent = KeyFrame
+GetKeyBtn.Position = UDim2.new(0.05, 0, 0.65, 0)
+GetKeyBtn.Size = UDim2.new(0.42, 0, 0, 35)
+GetKeyBtn.BackgroundColor3 = Color3.fromRGB(20, 25, 20)
+GetKeyBtn.Text = "Get Free Key"
+GetKeyBtn.TextColor3 = Color3.fromRGB(0, 200, 50)
+GetKeyBtn.TextSize = 13
+GetKeyBtn.Font = Enum.Font.SourceSansBold
+
+GetKeyCorner.CornerRadius = UDim.new(0, 6)
+GetKeyCorner.Parent = GetKeyBtn
+
+SubmitBtn.Parent = KeyFrame
+SubmitBtn.Position = UDim2.new(0.53, 0, 0.65, 0)
+SubmitBtn.Size = UDim2.new(0.42, 0, 0, 35)
+SubmitBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 30)
+SubmitBtn.Text = "Activate Hub"
+SubmitBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+SubmitBtn.TextSize = 13
+SubmitBtn.Font = Enum.Font.SourceSansBold
+
+SubmitCorner.CornerRadius = UDim.new(0, 6)
+SubmitCorner.Parent = SubmitBtn
+-- ========================================================
+-- PRIVATE DEVELOPER VERSION - SECTION 3 (AUTOMATED GITHUB SYNC)
+-- ========================================================
+local VirtualInputManager = game:GetService("VirtualInputManager")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local StarterGui = game:GetService("StarterGui")
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+
+local running = false
+local noclipActive = false
+local currentDelay = 0.060
+
+-- AUTOMATED NETWORK KEY CODES (Pulls straight from your GitHub Pages file)
+local function generateSecretDailyKey()
+    local success, result = pcall(function()
+        -- ⚠️ REPLACE "YOUR_USERNAME" WITH YOUR ACTUAL GITHUB NAME BELOW!
+        return game:HttpGet("https://ukwnx.github.io/roblox-key-hub/key1.txt")
+    end)
+    
+    if success then
+        -- Automatically trims out any hidden web spacing or trailing characters
+        local cleanKey = string.gsub(result, "[%s\r\n]", "")
+        return cleanKey
+    else
+        warn("[SERVER ERROR] Failed to fetch dynamic key from GitHub Pages.")
+        return nil
+    end
+end
+
+local function tapKey(key)
+    VirtualInputManager:SendKeyEvent(true, key, false, game)
+    task.wait(0.01)
+    VirtualInputManager:SendKeyEvent(false, key, false, game)
+end
+
+-- Key Input replication loop
+task.spawn(function()
+    while true do
+        if running then
+            tapKey(Enum.KeyCode.Q)
+            task.wait(currentDelay)
+            tapKey(Enum.KeyCode.E)
+            task.wait(currentDelay)
+        else
+            task.wait(0.1)
+        end
+    end
+end)
+
+-- Collision bypass loop
+RunService.Stepped:Connect(function()
+    if noclipActive then
+        local player = Players.LocalPlayer
+        local character = player.Character
+        if character then
+            for _, part in pairs(character:GetDescendants()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = false
+                end
+            end
+        end
+    end
+end)
+
+-- ACTIVE BACKGROUND INDIVIDUAL 6-HOUR DISCONNECT TIMER
+local function startIndividualCountdown()
+    task.spawn(function()
+        local activationTime = os.time()
+        local sessionDuration = 21600 -- 6 hours execution cap
+        while true do
+            task.wait(5)
+            local elapsed = os.time() - activationTime
+            if elapsed >= sessionDuration then
+                running = false
+                noclipActive = false
+                ScreenGui:Destroy()
+                Players.LocalPlayer:Kick("Key has expired, get a new key.")
+                break
+            end
+        end
+    end)
+end
+-- ========================================================
+-- PRIVATE DEVELOPER VERSION - SECTION 4 (FIXED COMPILER)
+-- ========================================================
+
+-- CRITICAL DEVELOPER PRINTS: This writes today's random key ONLY to your F9 console
+local MySecretGeneratedKey = generateSecretDailyKey()
+print("========================================================")
+print("[SERVER DATA] SECURITY LOCK INITIALIZED")
+print("[SERVER DATA] TODAY'S SECURE KEY IS: " .. MySecretGeneratedKey)
+print("========================================================")
+
+GetKeyBtn.MouseButton1Click:Connect(function()
+    if setclipboard then
+        setclipboard(YOUR_AD_LINK)
+        GetKeyBtn.Text = "Link Copied!"
+        task.wait(2)
+        GetKeyBtn.Text = "Get Free Key"
+    end
+end)
+
+SubmitBtn.MouseButton1Click:Connect(function()
+    local correctLiveKey = generateSecretDailyKey()
+    local userText = string.gsub(KeyInput.Text, "[%s\r\n]", "")
+    
+    if userText == correctLiveKey then
+        KeyFrame.Visible = false
+        MainFrame.Visible = true
+        startIndividualCountdown() 
+        print("System Authentication Passed.")
+    else
+        SubmitBtn.Text = "WRONG KEY! TRY AGAIN"
+        SubmitBtn.BackgroundColor3 = Color3.fromRGB(150, 0, 0)
+        task.wait(2)
+        SubmitBtn.Text = "Activate Hub"
+        SubmitBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 30)
+    end
+end)
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.RightControl and MainFrame.Visible then
+        MainFrame.Visible = not MainFrame.Visible
+    end
+end)
+
+ToggleButton.MouseButton1Click:Connect(function()
+    running = not running
+    if running then
+        ToggleButton.Text = "SPEED CHANGER: ACTIVE"
+        ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+        ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 150, 30) 
+    else
+        ToggleButton.Text = "SPEED CHANGER: NOT ACTIVE"
+        ToggleButton.TextColor3 = Color3.fromRGB(150, 150, 150)
+        ToggleButton.BackgroundColor3 = Color3.fromRGB(15, 20, 15)
+    end
+end)
+
+NoclipButton.MouseButton1Click:Connect(function()
+    noclipActive = not noclipActive
+    if noclipActive then
+        NoclipButton.Text = "HURDLE BYPASSER: ACTIVE"
+        NoclipButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+        NoclipButton.BackgroundColor3 = Color3.fromRGB(0, 150, 30)
+    else
+        NoclipButton.Text = "HURDLE BYPASSER: INACTIVE"
+        NoclipButton.TextColor3 = Color3.fromRGB(150, 150, 150)
+        NoclipButton.BackgroundColor3 = Color3.fromRGB(15, 20, 15)
+    end
+end)
+
+SpeedSlider.MouseButton1Down:Connect(function()
+    local mouse = Players.LocalPlayer:GetMouse()
+    local moveConnection
+    local function updateSlider()
+        local relativeX = mouse.X - SpeedSlider.AbsolutePosition.X
+        local percentage = math.clamp(relativeX / SpeedSlider.AbsoluteSize.X, 0, 1)
+        SliderBar.Size = UDim2.new(percentage, 0, 1, 0)
+        currentDelay = 0.010 + (percentage * 0.100)
+        local displayMs = math.floor(currentDelay * 1000)
+        if displayMs < 40 then
+            SpeedLabel.Text = "  Speed Changer: " .. displayMs .. "ms (HYPER)"
+            SpeedLabel.TextColor3 = Color3.fromRGB(255, 50, 50) 
+        else
+            SpeedLabel.Text = "  Speed Changer: " .. displayMs .. "ms (Safe)"
+            SpeedLabel.TextColor3 = Color3.fromRGB(0, 200, 50)
+        end
+    end
+    updateSlider()
+    moveConnection = mouse.Move:Connect(updateSlider)
+    local upConnection
+    upConnection = game:GetService("UserInputService").InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            moveConnection:Disconnect()
+            upConnection:Disconnect()
+        end
+    end)
+end)
+
+local function checkForAdmins()
+    for _, player in pairs(game.Players:GetChildren()) do
+        if player:GetRankInGroup(34394017) >= 200 or player.AccountAge > 5000 then 
+            running = false
+            noclipActive = false
+            ToggleButton.Text = "DISABLED"
+            NoclipButton.Text = "DISABLED"
+            AdminLabel.Text = "  Admin Detection:\n  Admin Detected"
+            AdminLabel.TextColor3 = Color3.fromRGB(255, 50, 50)
+            StarterGui:SetCore("ChatMakeSystemMessage", {
+                Text = "🚨 ALERT: ADMIN IS IN SERVER 🚨",
+                Color = Color3.fromRGB(255, 0, 0),
+                Font = Enum.Font.SourceSansBold,
+                TextSize = 24
+            })
+            return true
+        end
+    end
+    return false
+end
+game.Players.PlayerAdded:Connect(checkForAdmins)
+task.spawn(function()
+    while true do
+        task.wait(2)
+        if not running and AdminLabel.TextColor3 == Color3.fromRGB(255, 50, 50) then break end
+        checkForAdmins()
+    end
+end)
